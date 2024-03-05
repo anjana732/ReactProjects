@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 function Github() {
-   // const {followers} = useParams()
-   const [data, setdata] = useState([])
+   const data = useLoaderData()
+   /*const [data, setdata] = useState([])
    useEffect(() =>{
     fetch('https://api.github.com/users/anjana732')
    .then(response => response.json())
    .then(data => {
     console.log(data)
     setdata(data)})
-   })
+   })*/
    
   return (
     <div>Github Followers: {data.followers}</div>
@@ -17,3 +18,10 @@ function Github() {
 }
 
 export default Github
+
+export const getGitHubDetail = async() =>{
+  const response = await fetch('https://api.github.com/users/anjana732')
+  return response.json()
+}
+
+
