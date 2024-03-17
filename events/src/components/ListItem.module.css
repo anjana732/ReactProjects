@@ -1,0 +1,8 @@
+.btnn{
+    float: right;
+    background-color: rgb(61, 151, 236);
+    border: 1px solid rgb(61, 151, 236);
+    padding: 3px 20px;
+    border-radius: 5px;
+    
+}

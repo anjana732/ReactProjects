@@ -1,16 +1,17 @@
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from './components/Header'
+import ListGenerator from './components/ListGenerator'
+import './App.css'
 function App() {
+
+  const list = ["Roti", "Dal", "Rice", "Salad","Milk", "Coffee", "Curd", "Vegetables"]
 
   return (
     <>
-     <ul class="list-group">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
+    <div className='container'>
+    <Header/>
+    <ListGenerator item={list}/>
+    </div>
     </>
   )
 }
