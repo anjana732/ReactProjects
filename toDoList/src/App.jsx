@@ -22,12 +22,16 @@ function App() {
       console.log(newToDoItem);
       setNewTask(newToDoItem);
     };
-    
+    const handleDeletedToDos = (taskName) => {
+      console.log(`item deleted: ${taskName}`)
+      const newToDoItem = todo.filter((item)=> item.task != taskName);
+      setNewTask(newToDoItem);
+    }
   return (
     <>
       <Header></Header>
       <ToDoInput onNewToDo={handleNewToDo}></ToDoInput>
-      <ToDos todos={newtask}></ToDos>
+      <ToDos todos={newtask} deleteTask={handleDeletedToDos}></ToDos>
     </>
   )
 }
