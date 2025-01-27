@@ -36,6 +36,7 @@ const router = createBrowserRouter(
       loader={getGitHubDetail}
       path='github' 
       element={<Github/>}/>
+      <Route path='User/:userId' element={<User/>}/>
     </Route>
   )
 )
