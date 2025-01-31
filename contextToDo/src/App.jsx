@@ -52,8 +52,8 @@ function App() {
                         {
                           todos.map((todo)=> (
                           <div key={todo.id} className='w-full'>
-                              <TodoForm todo={todo} />
-                              
+                              <TodoItem todo={todo} />
+
                           </div>))
                         }
                     </div>
