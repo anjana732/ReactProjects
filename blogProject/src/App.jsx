@@ -25,6 +25,11 @@ function App() {
    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
     <div>
       <Header></Header>
+      <main>
+        <Outlet>
+
+        </Outlet>
+      </main>
       <Footers/>
     </div>
    </div>
